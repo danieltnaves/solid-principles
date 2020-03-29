@@ -4,19 +4,11 @@ import java.util.List;
 
 public class SearchQueryBuilder {
 
-    public String buildFilterQuery(List<Pair> filters) {
-        final StringBuilder query = new StringBuilder("SELECT * FROM user WHERE active = 1");
-        filters.forEach(pair -> {
-            if (pair.getKey().equals("NAME") && !pair.getValue().isEmpty()) {
-                query.append(String.format(" AND name = %s", pair.getValue()));
-            }
-            if (pair.getKey().equals("COUNTRY") && !pair.getValue().isEmpty()) {
-                query.append(String.format(" AND country = %s", pair.getValue()));
-            }
-            if (pair.getKey().equals("CITY") && !pair.getValue().isEmpty()) {
-                query.append(String.format(" AND city = %s", pair.getValue()));
-            }
-        });
+    private static final String FILTER_QUERY = "SELECT * FROM user WHERE active = 1";
+
+    public String buildFilterQuery(List<FilterCriteria> filtersCriterias) {
+        final StringBuilder query = new StringBuilder(FILTER_QUERY);
+        filtersCriterias.forEach(filterCriteria -> query.append(filterCriteria.getCriteria()));
         return query.toString();
     }
 
