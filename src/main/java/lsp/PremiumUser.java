@@ -1,9 +1,14 @@
 package lsp;
 
-public class PremiumUser extends User {
+import java.util.Arrays;
+import java.util.List;
+
+class PremiumUser extends PremiumMember {
+
+    private static final String PREMIUM_ROLE = "PREMIUM_ROLE";
 
     @Override
-    public void sendMessage(String userId, String message) {
-        System.out.println("Sending message " + message + " to the user " + userId);
+    public List<String> getRoles() {
+        return Arrays.asList(PREMIUM_ROLE);
     }
 }

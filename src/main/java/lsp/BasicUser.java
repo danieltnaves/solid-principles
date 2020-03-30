@@ -1,10 +1,14 @@
 package lsp;
 
-public class BasicUser extends User {
+import java.util.Arrays;
+import java.util.List;
+
+class BasicUser extends User {
+
+    private static final String BASIC_ROLE = "BASIC_ROLE";
 
     @Override
-    public void sendMessage(String userId, String message) {
-        throw new RuntimeException("Basic users can't send messages.");
+    public List<String> getRoles() {
+        return Arrays.asList(BASIC_ROLE);
     }
-
 }

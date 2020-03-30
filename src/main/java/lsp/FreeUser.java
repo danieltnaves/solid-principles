@@ -1,10 +1,14 @@
 package lsp;
 
-public class FreeUser extends User {
+import java.util.Arrays;
+import java.util.List;
+
+class FreeUser extends User {
+
+    private static final String FREE_ROLE = "FREE_ROLE";
 
     @Override
-    public void sendMessage(String userId, String message) {
-        throw new RuntimeException("Free users can't send messages.");
+    public List<String> getRoles() {
+        return Arrays.asList(FREE_ROLE);
     }
-
 }

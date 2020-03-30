@@ -10,11 +10,10 @@ public abstract class User {
         return friends;
     }
 
-    void sendWave(String userId) {
+    public abstract List<String> getRoles();
+
+    public void sendWave(String userId) {
         System.out.println("Sending a Wave to " + userId);
     }
-
-    //This feature must be available just for PREMIUM users
-    abstract void sendMessage(String userId, String message);
 
 }
