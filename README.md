@@ -2,7 +2,7 @@
 
 The goal of this repository is to show the SOLID principles of OO design. For each principle, you can find two commit messages. The first commit violates the principle, and the second solves the violation. 
 
-###SRP - The Single Responsibility Principle	
+### SRP - The Single Responsibility Principle	
 
 A class should have one, and only one, reason to change.
 
@@ -10,7 +10,7 @@ A class should have one, and only one, reason to change.
 
 **After SRP:** https://github.com/danieltnaves/solid-principles/commit/e78cb6489a5a792e7f13b1fe03ca35b2a6b29d76 
 
-###OCP - The Open Closed Principle
+### OCP - The Open Closed Principle
 	
 You should be able to extend a classes behavior, without modifying it.
 
@@ -18,7 +18,7 @@ You should be able to extend a classes behavior, without modifying it.
 
 **After OCP:** https://github.com/danieltnaves/solid-principles/commit/aa9457243120c5e475113e61bc154afe0b58b900
 
-###LSP - The Liskov Substitution Principle
+### LSP - The Liskov Substitution Principle
 
 Derived classes must be substitutable for their base classes.
 
@@ -26,7 +26,7 @@ Derived classes must be substitutable for their base classes.
 
 **After LSP:** https://github.com/danieltnaves/solid-principles/commit/13fdba8b580224b944d4594f6da499d047115ff2
 
-###ISP - The Interface Segregation Principle	
+### ISP - The Interface Segregation Principle	
 
 Make fine grained interfaces that are client specific.
 
@@ -34,7 +34,7 @@ Make fine grained interfaces that are client specific.
 
 **After ISP:** https://github.com/danieltnaves/solid-principles/commit/8b397461962255e025da4b9f4fb64d51f87dabf0
 
-###DIP - The Dependency Inversion Principle	
+### DIP - The Dependency Inversion Principle	
 
 Depend on abstractions, not on concretions.
 
