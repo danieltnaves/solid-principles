@@ -1,19 +1,17 @@
 package dip;
 
+import java.util.List;
+
 public class StorageService {
 
-    private final MongoRepository mongoRepository;
+    private final List<Repository> repositories;
 
-    private final PostgresRepository postgresRepository;
-
-    StorageService(MongoRepository mongoRepository, PostgresRepository postgresRepository) {
-        this.mongoRepository = mongoRepository;
-        this.postgresRepository = postgresRepository;
+    StorageService(List<Repository> repositories) {
+        this.repositories = repositories;
     }
 
     public void saveData() {
-        mongoRepository.persist();
-        postgresRepository.save();
+        repositories.forEach(Repository::save);
     }
 
 }

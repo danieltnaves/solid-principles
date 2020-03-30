@@ -1,9 +1,13 @@
 package dip;
 
-public class MongoRepository {
+public class MongoRepository implements Repository {
 
-    public void persist() {
+    private void persist() {
         System.out.println("Persisting to MongoDB...");
     }
 
+    @Override
+    public void save() {
+        persist();
+    }
 }
